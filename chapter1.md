@@ -33,7 +33,7 @@ $ npm install --save-dev nodemon
 }
 ```
 
-### ENV environment  
+### ENV environment
 
 ```bash
 $ npm install --save dotenv
@@ -47,11 +47,38 @@ Create a file call \`.env\`
 DOMAIN=http://localhost:3000
 ```
 
+### ESLint Config
+
+Execute `eslint --init` in your terminal folder or add `.eslintrc.json`
+
+```bash
+$ npm install --save-dev eslint eslint-config-airbnb-base eslint-plugin-import
+```
+
+**.eslintrc.json**
+
+```js
+{
+  "env": {
+    "node": true
+  },
+  "extends": "airbnb-base",
+  "rules": {
+    "max-len": "off",
+    "radix": "off",
+    "object-curly-newline": "off",
+    "newline-per-chained-call": "off",
+    "import/newline-after-import": "off",
+    "no-unused-vars": "off"
+  }
+}
+```
+
 ### Setting up Layouts Partials and helpers
 
 [Link to express-ejs-layouts](https://github.com/Soarez/express-ejs-layouts)
 
-Assuming that you use `EJS` as view engine 
+Assuming that you use `EJS` as view engine
 
 ```bash
 $ npm install --save express-ejs-layouts
@@ -83,7 +110,7 @@ views
 ├── ...
 ├── partials
 │   ├── navbar.ejs
-│   └── footer.ejs
+│   └── footer.ejs
 └── layouts
     ├── main.ejs
     └── secondLayout.ejs
