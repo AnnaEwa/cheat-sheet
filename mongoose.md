@@ -104,7 +104,21 @@ const homeSchema = new Schema({
 
 #### 1 to N Relationship
 
-Example: Users has one home
+Example: 
+
+```javascript
+...
+
+const classSchema = new Schema({
+  ...
+  students: [{
+    type: Schema.Types.ObjectId,
+    ref: 'User'
+  }]
+});
+
+...
+```
 
 #### Model with subschema or embedded documents
 
