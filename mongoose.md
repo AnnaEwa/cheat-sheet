@@ -113,6 +113,25 @@ Example: Users has one home
 
 Example: Products has reviews
 
+**reviews.js**
+
+```js
+const mongoose = require('mongoose');
+const Schema   = mongoose.Schema;
+
+const reviewSchema = new Schema({
+  content: String,
+  stars: Number,
+  author: String
+});
+
+const Review = mongoose.model('Review', reviewSchema);
+
+module.exports = Review;
+```
+
+**products.js**
+
 ```js
 ...
 const Review   = require('./review');
@@ -127,8 +146,6 @@ const productSchema = new Schema({
 
 ...
 ```
-
-
 
 
 
