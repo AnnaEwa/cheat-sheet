@@ -16,6 +16,8 @@ $ npm install
 
 ### nodemon
 
+[Link](http://nodemon.io)
+
 ```bash
 $ npm install --save-dev nodemon
 ```
@@ -127,14 +129,13 @@ views
 * Create a remote repository in Gihub
 
 * Create local repository
+
   ```
   $ git init
   $ git add .
   $ git commit -m "initial commit"
   $ git checkout -b dev
   ```
-
-
 
 
 
