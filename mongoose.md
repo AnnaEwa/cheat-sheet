@@ -33,11 +33,11 @@ mongoose.connect('< URL >', {
   reconnectTries: Number.MAX_VALUE
 }, (error) => {
   if (!error) { 
-    
-    
+
+
   }
   console.error(`💣 ${err.name}: ${err.message}`)
-  process.exit(0)
+  process.exit(-1)
 });
 
 ...
