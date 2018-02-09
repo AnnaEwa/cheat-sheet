@@ -14,7 +14,7 @@ $ cd <nameOfProject>
 $ npm install
 ```
 
-### Setup nodemon
+### nodemon
 
 ```bash
 $ npm install --save-dev nodemon
@@ -33,7 +33,7 @@ $ npm install --save-dev nodemon
 }
 ```
 
-### ENV environment
+### Variable environment
 
 ```bash
 $ npm install --save dotenv
@@ -47,7 +47,11 @@ Create a file call \`.env\`
 DOMAIN=http://localhost:3000
 ```
 
-### ESLint Config
+### ESLint
+
+[Link ESLint](https://eslint.org)
+
+[Link ESlint Rules](https://eslint.org/docs/rules/)
 
 Execute `eslint --init` in your terminal folder or add `.eslintrc.json`
 
@@ -74,7 +78,7 @@ $ npm install --save-dev eslint eslint-config-airbnb-base eslint-plugin-import
 }
 ```
 
-### Setting up Layouts Partials and helpers
+### Layouts Partials and helpers views
 
 [Link to express-ejs-layouts](https://github.com/Soarez/express-ejs-layouts)
 
