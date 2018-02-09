@@ -33,15 +33,16 @@ mongoose.connect('< URL >', {
   reconnectTries: Number.MAX_VALUE
 }, (error) => {
   if (!error) { 
-
-
+    console.log(`connected to ${<URL>}`);
   }
-  console.error(`💣 ${err.name}: ${err.message}`)
-  process.exit(-1)
+  console.error(`💣 ${err.name}: ${err.message}`);
+  process.exit(-1);
 });
 
 ...
 ```
+
+⚠️ Don't forget to setup `<URL>` with `'mongodb://localhost:port/database-name'` or with `process.env.MONGODB_URI` .
 
 
 
