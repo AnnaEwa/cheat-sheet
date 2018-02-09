@@ -1,3 +1,10 @@
-# My Awesome Book
+# Express
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+- express generator
+- setup views
+- setup layouts helpers partials
+- Models - Mongoose
+- Authentication - Authorization
+- setup helpers middlewares
+
+
