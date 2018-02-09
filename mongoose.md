@@ -75,6 +75,11 @@ const blogSchema = new Schema({
   nested: {
     stuff: { type: String, lowercase: true, trim: true }
   }
+}, {
+  timestamps: {
+    createdAt: "created_at",
+    updatedAt: "updated_at"
+  }
 });
 
 const Blog = mongoose.model('Blog', blogSchema);
@@ -83,6 +88,47 @@ module.exports = Blog;
 ```
 
 ### Relations between models
+
+#### 1 to 1 Relationship
+
+Example: Users has one home
+
+```javascript
+...
+  const homeSchema = new Schema({
+    name: String,
+    owner: {
+      type: Schema.Types.ObjectId,
+      ref: 'User'
+    }
+  });
+...
+```
+
+#### 1 to N Relationship
+
+Example: Users has one home
+
+#### Model with subschema or embedded documents
+
+Example: Products has reviews
+
+```js
+...
+const Review   = require('./review');
+
+const productSchema = new Schema({
+  name       : String,
+  price      : Number,
+  imageUrl   : String,
+  description: String,
+  reviews    : [Review.schema]
+});
+
+...
+```
+
+
 
 
 
