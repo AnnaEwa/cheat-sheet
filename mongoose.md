@@ -2,14 +2,7 @@
 
 mongoimport --db databaseName --collection collectionName --file fileName
 
-# mongoose
-
-* npm install --save mongoose
-* object document mapper
-* bring schemas into our use of mongodb
-* see example schemas in
-  `./snippets`
-* types: String, Number, Date, Boolean, Array, Mixed, Objectid
+[Link Mongoose](http://mongoosejs.com)
 
 ## Setting up connection
 
@@ -48,6 +41,8 @@ mongoose.connect('< URL >', {
 
 All models should go inside `models` folder.
 
+See documentation for schemas types
+
 **model.js**
 
 ```javascript
@@ -55,26 +50,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const blogSchema = new Schema({
-  name:    String,
-  binary:  Buffer,
-  living:  Boolean,
-  updated: { type: Date, default: Date.now },
-  age:     { type: Number, min: 18, max: 65 },
-  mixed:   Schema.Types.Mixed,
-  _someId: Schema.Types.ObjectId,
-  array:      [],
-  ofString:   [String],
-  ofNumber:   [Number],
-  ofDates:    [Date],
-  ofBuffer:   [Buffer],
-  ofBoolean:  [Boolean],
-  ofMixed:    [Schema.Types.Mixed],
-  ofObjectId: [Schema.Types.ObjectId],
-  ofArrays:   [[]],
-  ofArrayOfNumbers: [[Number]],
-  nested: {
-    stuff: { type: String, lowercase: true, trim: true }
-  }
+  name: String
 }, {
   timestamps: {
     createdAt: "created_at",
