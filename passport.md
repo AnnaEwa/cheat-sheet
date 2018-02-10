@@ -123,5 +123,32 @@ const isLoggedIn = require('path/middlewares').isLoggedIn
 app.use( isLoggedIn('/login') ); // Example
 ```
 
+## Protecting routes \(connect-ensure-login package\)
+
+```bash
+$ npm install --save connect-ensure-login
+```
+
+How to use it
+
+```javascript
+const ensureLogin = require("connect-ensure-login");
+
+router.get("/private-page", ensureLogin.ensureLoggedIn(), (req, res) => {
+  res.render("private");
+});
+```
+
+## Setting user for all views
+
+```javascript
+// ⚠️ After passport configuration!!!!!
+app.use((req, res, next) => {
+  res.locals.user = req.user || null;
+  next();
+})
+
+```
+
 
 
