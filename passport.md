@@ -14,6 +14,8 @@
 
 ## Setting up passportJS
 
+⚠️ **You need to setup sessions before using passport !!!!!!!**
+
 ```javascript
 $ npm install --save passport passport-local
 ```
