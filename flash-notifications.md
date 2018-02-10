@@ -90,5 +90,5 @@ Create a partial view for notifications
 <% }) %>
 ```
 
-
+call the partial `<%- include('../partials/notifications') %>` .
 
