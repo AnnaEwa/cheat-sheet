@@ -22,6 +22,8 @@ $ npm install --save passport passport-local bcrypt
 
 Create `helpers` folder and the file `passport.js` in it.
 
+## Local Strategy
+
 **passport.js**
 
 ```javascript
@@ -32,52 +34,58 @@ const LocalStrategy = require('passport-local').Strategy;
 // Import the model that we will use for login
 const User = require('../models/user');
 
-// What we save in session
-passport.serializeUser((user, cb) => {
-  cb(null, user._id);
-});
-
-// Get what we got from session
-passport.deserializeUser((id, cb) => {
-  User.findOne({ '_id': id }, (err, user) => {
-    if (err) { return cb(err); }
-    cb(null, user);
+function configurePassport() {
+  // What we save in session
+  passport.serializeUser((user, cb) => {
+    cb(null, user._id);
   });
-});
-
-// Strategy that we follow locally
-passport.use(new LocalStrategy((username, password, next) => {
-  User.findOne({ username }, (err, user) => {
-    if (err) {
-      return next(err);
-    }
-    if (!user) {
-      return next(null, false, { message: 'Incorrect username' });
-    }
-    if (!bcrypt.compareSync(password, user.password)) {
-      return next(null, false, { message: 'Incorrect password' });
-    }
-
-    return next(null, user);
+  
+  // Get what we got from session
+  passport.deserializeUser((id, cb) => {
+    User.findOne({ '_id': id }, (err, user) => {
+      if (err) { return cb(err); }
+      cb(null, user);
+    });
   });
-}));
+  
+  // Strategy that we follow locally
+  passport.use(new LocalStrategy((username, password, next) => {
+    User.findOne({ username }, (err, user) => {
+      if (err) {
+        return next(err);
+      }
+      if (!user) {
+        return next(null, false, { message: 'Incorrect username' });
+      }
+      if (!bcrypt.compareSync(password, user.password)) {
+        return next(null, false, { message: 'Incorrect password' });
+      }
+  
+      return next(null, user);
+    });
+  }));
+}
 
-module.exports = passport;
+module.exports = configurePassport;
 ```
 
 **app.js**
 
 ```javascript
 ...
-const passport = require('./helpers/passport');
+const passport = require('passport');
+const configurePassport = require('./helpers/passport');
 
 ...
-
+configurePassport();
+app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
 ...
 ```
+
+
 
 
 
