@@ -91,7 +91,13 @@ app.use(passport.session());
 
 `req.user` -&gt; If authentication succeeds, the next handler will be invoked and the `req.user` property will be set to the authenticated user.
 
-`req.logout()` -&gt; Can be called from any route handler which needs to terminate a login session. will remove the `req.user ` property and clear the login session \(if any\).
+`req.logout()` -&gt; Can be called from any route handler which needs to terminate a login session. will remove the `req.user` property and clear the login session \(if any\).
 
 `req.isAuthenticated()` -&gt; Return if an user is authenticated or not.
+
+## Protecting routes
+
+Setting up middleware using passport
+
+
 
