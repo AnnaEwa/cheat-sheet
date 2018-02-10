@@ -1,6 +1,6 @@
 # PassportJS
 
-config \(see snippet\)
+* config \(see snippet\)
 
 * * serialize
   * deserialize
