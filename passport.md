@@ -49,7 +49,9 @@ function configurePassport() {
   });
 
   // Strategy that we follow locally
-  passport.use(new LocalStrategy((username, password, next) => {
+  passport.use(new LocalStrategy({
+    passReqToCallback: true
+  }, (username, password, next) => {
     User.findOne({ username }, (err, user) => {
       if (err) {
         return next(err);
@@ -85,6 +87,26 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 ...
+```
+
+In your routes controllers that manage the login.
+
+```javascript
+authRoutes.get("/login", (req, res, next) => {
+  res.render("auth/login");
+});
+
+authRoutes.post("/login", passport.authenticate("local", {
+  successRedirect: "/",
+  failureRedirect: "/login",
+  failureFlash: true,
+  passReqToCallback: true
+}));
+
+authRoutes.get("/logout", (req, res) => {
+  req.logout();
+  res.redirect("/login");
+});
 ```
 
 ## handlers functions
@@ -125,6 +147,8 @@ app.use( isLoggedIn('/login') ); // Example
 
 ## Protecting routes \(connect-ensure-login package\)
 
+[Link connect-ensure-login](https://github.com/jaredhanson/connect-ensure-login)
+
 ```bash
 $ npm install --save connect-ensure-login
 ```
@@ -147,7 +171,6 @@ app.use((req, res, next) => {
   res.locals.user = req.user || null;
   next();
 })
-
 ```
 
 
