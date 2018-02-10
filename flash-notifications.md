@@ -58,5 +58,37 @@ exports.notifications = (req, res, next) => {
 };
 ```
 
+Create a partial view for notifications
+
+**notification.ejs**
+
+```html
+<% infoMessages && infoMessages.forEach((message) => { %>
+  <div class="alert alert-info">
+    <%- message %>
+  </div>
+<% })
+  dangerMessages && dangerMessages.forEach((message) => { %>
+  <div class="alert alert-danger">
+    <%- message %>
+  </div>
+<% })
+  errorMessages && errorMessages.forEach((message) => { %>
+  <div class="alert alert-danger">
+    <%- message %>
+  </div>
+<% })
+  successMessages && successMessages.forEach((message) => { %>
+  <div class="alert alert-success">
+    <%- message %>
+  </div>
+<% })
+  warningMessages && warningMessages.forEach((message) => { %>
+  <div class="alert alert-warning">
+    <%- message %>
+  </div>
+<% }) %>
+```
+
 
 
