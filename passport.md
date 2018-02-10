@@ -69,6 +69,8 @@ function configurePassport() {
 module.exports = configurePassport;
 ```
 
+⚠️ Information from form in variables `username` and `password`
+
 **app.js**
 
 ```javascript
