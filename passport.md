@@ -39,7 +39,7 @@ function configurePassport() {
   passport.serializeUser((user, cb) => {
     cb(null, user._id);
   });
-  
+
   // Get what we got from session
   passport.deserializeUser((id, cb) => {
     User.findOne({ '_id': id }, (err, user) => {
@@ -47,7 +47,7 @@ function configurePassport() {
       cb(null, user);
     });
   });
-  
+
   // Strategy that we follow locally
   passport.use(new LocalStrategy((username, password, next) => {
     User.findOne({ username }, (err, user) => {
@@ -60,7 +60,7 @@ function configurePassport() {
       if (!bcrypt.compareSync(password, user.password)) {
         return next(null, false, { message: 'Incorrect password' });
       }
-  
+
       return next(null, user);
     });
   }));
@@ -85,7 +85,13 @@ app.use(passport.session());
 ...
 ```
 
+## handlers functions
 
+`req.login(newUser, function(error){ ...`}`)` -&gt; Used to establish a login session.
 
+`req.user` -&gt; If authentication succeeds, the next handler will be invoked and the `req.user` property will be set to the authenticated user.
 
+`req.logout()` -&gt; Can be called from any route handler which needs to terminate a login session. will remove the `req.user ` property and clear the login session \(if any\).
+
+`req.isAuthenticated()` -&gt; Return if an user is authenticated or not.
 
