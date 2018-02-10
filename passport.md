@@ -51,7 +51,7 @@ function configurePassport() {
   // Strategy that we follow locally
   passport.use(new LocalStrategy({
     passReqToCallback: true
-  }, (username, password, next) => {
+  }, (req, username, password, next) => {
     User.findOne({ username }, (err, user) => {
       if (err) {
         return next(err);
