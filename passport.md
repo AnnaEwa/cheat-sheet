@@ -97,7 +97,7 @@ app.use(passport.session());
 
 `req.isAuthenticated()` -&gt; Return if an user is authenticated or not.
 
-## Protecting routes
+## Protecting routes \(manual version\)
 
 Setting up middleware using passport concept of middleware
 
