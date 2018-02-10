@@ -97,7 +97,27 @@ app.use(passport.session());
 
 ## Protecting routes
 
-Setting up middleware using passport
+Setting up middleware using passport concept of middleware
+
+Inside `helpers` create file `middlewares.js` .
+
+**middleware.js**
+
+```javascript
+exports.pretectingRoute = redirect => (req, res, next) => {
+  if (req.isAuthenticated()) {
+    next();
+  } else {
+    res.redirect(redirect);
+  }
+};
+```
+
+use
+
+```javascript
+const redirect = require('path/')
+```
 
 
 
