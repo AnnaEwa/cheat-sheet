@@ -12,5 +12,11 @@
 * if \(!req.user\) { ... }
 * if \(!req.isAuthenticated\(\)\) { ... }
 
+## Setting up passportJS
+
+```javascript
+$ npm install --save passport passport-local
+```
+
 
 
