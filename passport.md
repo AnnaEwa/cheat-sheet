@@ -104,7 +104,7 @@ Inside `helpers` create file `middlewares.js` .
 **middleware.js**
 
 ```javascript
-exports.pretectingRoute = redirect => (req, res, next) => {
+exports.isLoggedIn = redirect => (req, res, next) => {
   if (req.isAuthenticated()) {
     next();
   } else {
@@ -116,7 +116,9 @@ exports.pretectingRoute = redirect => (req, res, next) => {
 use
 
 ```javascript
-const redirect = require('path/')
+const isLoggedIn = require('path/middlewares').isLoggedIn
+
+app.use( isLoggedIn('/login') ); // Example
 ```
 
 
