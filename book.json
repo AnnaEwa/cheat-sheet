@@ -2,7 +2,8 @@
 	"plugins": [
 		"ga",
 		"runkit",
-		"panel"
+		"panel",
+		"recently-updated"
 	],
 	"pluginsConfig": {
 		"ga": {
