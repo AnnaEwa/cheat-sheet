@@ -1,6 +1,8 @@
 # Git
 
-* Make sure you have `.gitignore` with `node_modules`
+{% panel style="danger" %}
+  Make sure you have `.gitignore` with `node_modules`
+{% endpanel %}
 
 * Create a remote repository in Gihub
 
