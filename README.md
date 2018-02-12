@@ -1,6 +1,6 @@
 # Express
 
-[Link](https://github.com/zapatran/cheat-sheet/blob/master/SUMMARY.md )
+[Website](https://zapatran.github.io/cheat-sheet/)
 
 * express generator
 * setup views
