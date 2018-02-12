@@ -1,7 +1,8 @@
 {
 	"plugins": [
 		"ga",
-		"runkit"
+		"runkit",
+		"panel"
 	],
 	"pluginsConfig": {
 		"ga": {
