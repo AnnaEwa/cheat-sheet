@@ -155,10 +155,9 @@ router.post('/login', passport.authenticate('local', {
   successReturnToOrRedirect: '/', 
   failureRedirect: '/login' 
 }));
-
 ```
 
-## Setting user for all views
+## User available for all views
 
 ```javascript
 // ⚠️ After passport configuration!!!!!
