@@ -157,6 +157,7 @@ router.get("/private-page", ensureLogin.ensureLoggedIn(), (req, res) => {
 // ⚠️ After passport configuration!!!!!
 app.use((req, res, next) => {
   res.locals.user = req.user || null;
+  res.locals.isAuthenticated = req.isAuthenticated();
   next();
 })
 ```
