@@ -80,7 +80,7 @@ $ npm install --save-dev eslint eslint-config-airbnb-base eslint-plugin-import
 }
 ```
 
-### Layouts Partials and helpers views
+### Layouts, Partials and Helpers views
 
 [Link to express-ejs-layouts](https://github.com/Soarez/express-ejs-layouts)
 
