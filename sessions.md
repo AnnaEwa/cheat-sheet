@@ -26,5 +26,3 @@ app.use(session({
 ...
 ```
 
-
-
