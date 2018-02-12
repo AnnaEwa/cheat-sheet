@@ -104,7 +104,7 @@ const homeSchema = new Schema({
 
 #### 1 to N Relationship
 
-Example: 
+Example:
 
 ```javascript
 ...
