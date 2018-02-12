@@ -1,0 +1,437 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Models · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="queries.html" />
+    
+    
+    <link rel="prev" href="../mongoose.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../express.html">
+            
+                <a href="../express.html">
+            
+                    
+                    Express Generator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../mongoose.html">
+            
+                <a href="../mongoose.html">
+            
+                    
+                    Mongoose
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="models.html">
+            
+                <a href="models.html">
+            
+                    
+                    Models
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="queries.html">
+            
+                <a href="queries.html">
+            
+                    
+                    Queries
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../sessions.html">
+            
+                <a href="../sessions.html">
+            
+                    
+                    Sessions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../flash-notifications.html">
+            
+                <a href="../flash-notifications.html">
+            
+                    
+                    Flash Notifications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../passport.html">
+            
+                <a href="../passport.html">
+            
+                    
+                    Passport
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../git.html">
+            
+                <a href="../git.html">
+            
+                    
+                    GIT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Models</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="models">Models</h1>
+<p>All models should go inside <code>models</code> folder.</p>
+<p>See documentation for schemas types</p>
+<p><strong>model.js</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> mongoose = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;mongoose&apos;</span>);
+<span class="hljs-keyword">const</span> Schema = mongoose.Schema;
+
+<span class="hljs-keyword">const</span> blogSchema = <span class="hljs-keyword">new</span> Schema({
+  name: <span class="hljs-built_in">String</span>
+}, {
+  timestamps: {
+    createdAt: <span class="hljs-string">&quot;created_at&quot;</span>,
+    updatedAt: <span class="hljs-string">&quot;updated_at&quot;</span>
+  }
+});
+
+<span class="hljs-keyword">const</span> Blog = mongoose.model(<span class="hljs-string">&apos;Blog&apos;</span>, blogSchema);
+
+<span class="hljs-built_in">module</span>.exports = Blog;
+</code></pre>
+<h3 id="schema-for-locations">Schema for locations</h3>
+<pre><code class="lang-javascript">...
+
+const restaurantSchema = <span class="hljs-keyword">new</span> Schema({
+  ...
+  location: {
+    type: {
+      type: <span class="hljs-built_in">String</span>
+    },
+    coordinates: [<span class="hljs-built_in">Number</span>]
+  }
+  ...
+});
+
+restaurantSchema.index({ location: <span class="hljs-string">&apos;2dsphere&apos;</span> });
+
+...
+</code></pre>
+<h4 id="1-to-1-relationship">1 to 1 Relationship</h4>
+<p>Example: Users has one home</p>
+<pre><code class="lang-javascript">...
+
+const homeSchema = <span class="hljs-keyword">new</span> Schema({
+  ...
+  owner: {
+    type: Schema.Types.ObjectId,
+    ref: <span class="hljs-string">&apos;User&apos;</span>
+  }
+});
+
+...
+</code></pre>
+<h4 id="1-to-n-relationship">1 to N Relationship</h4>
+<p>Example:</p>
+<pre><code class="lang-javascript">...
+
+const classSchema = <span class="hljs-keyword">new</span> Schema({
+  ...
+  students: [{
+    type: Schema.Types.ObjectId,
+    ref: <span class="hljs-string">&apos;User&apos;</span>
+  }]
+});
+
+...
+</code></pre>
+<h4 id="model-with-subschema-or-embedded-documents">Model with subschema or embedded documents</h4>
+<p>Example: Products has reviews</p>
+<p><strong>review.js</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> mongoose = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;mongoose&apos;</span>);
+<span class="hljs-keyword">const</span> Schema   = mongoose.Schema;
+
+<span class="hljs-keyword">const</span> reviewSchema = <span class="hljs-keyword">new</span> Schema({
+    ...
+});
+
+<span class="hljs-keyword">const</span> Review = mongoose.model(<span class="hljs-string">&apos;Review&apos;</span>, reviewSchema);
+
+<span class="hljs-built_in">module</span>.exports = Review;
+</code></pre>
+<p><strong>product.js</strong></p>
+<pre><code class="lang-js">...
+const Review   = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./review&apos;</span>);
+
+<span class="hljs-keyword">const</span> productSchema = <span class="hljs-keyword">new</span> Schema({
+  name       : <span class="hljs-built_in">String</span>,
+  price      : <span class="hljs-built_in">Number</span>,
+  imageUrl   : <span class="hljs-built_in">String</span>,
+  description: <span class="hljs-built_in">String</span>,
+  reviews    : [Review.schema]
+});
+
+...
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../mongoose.html" class="navigation navigation-prev " aria-label="Previous page: Mongoose">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="queries.html" class="navigation navigation-next " aria-label="Next page: Queries">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Models","level":"1.3.1","depth":2,"next":{"title":"Queries","level":"1.3.2","depth":2,"path":"mongoose/queries.md","ref":"mongoose/queries.md","articles":[]},"previous":{"title":"Mongoose","level":"1.3","depth":1,"path":"mongoose.md","ref":"mongoose.md","articles":[{"title":"Models","level":"1.3.1","depth":2,"path":"mongoose/models.md","ref":"mongoose/models.md","articles":[]},{"title":"Queries","level":"1.3.2","depth":2,"path":"mongoose/queries.md","ref":"mongoose/queries.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["ga"],"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-113929457-1"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mongoose/models.md","mtime":"2018-02-12T10:41:05.210Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-12T12:58:25.044Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
