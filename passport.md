@@ -149,6 +149,13 @@ const ensureLogin = require("connect-ensure-login");
 router.get("/private-page", ensureLogin.ensureLoggedIn(), (req, res) => {
   res.render("private");
 });
+
+// redirecting to previous page
+router.post('/login', passport.authenticate('local', { 
+  successReturnToOrRedirect: '/', 
+  failureRedirect: '/login' 
+}));
+
 ```
 
 ## Setting user for all views
