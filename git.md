@@ -1,6 +1,6 @@
 # Git
 
-{% panel style="danger" %}
+{% panel style="danger" title=".gitignore" %}
   Make sure you have `.gitignore` with `node_modules`
 {% endpanel %}
 
