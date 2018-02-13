@@ -34,3 +34,20 @@ On the command line, help is always at hand: you can either type `man <command>`
 `cp <file> <directory>` -> Copy `<file>` to `<directory>` (possibly overwriting an existing file)
 `cp -r <directory1> <directory2>` -> Copy `<directory1>` and its contents to `<directory2>` (possibly overwriting files inanexistingdirectory)
 `touch <file>` -> Update file access & modification time (and create `<file>` if it doesn’t exist)
+
+## Search
+`find <dir> -name "<file>"` -> Find all files named <file> inside <dir> (use wildcards [*] to search for parts of filenames,e.g."file.*").
+`grep "<text>" <file>` -> Output all occurrences of <text> inside. <file> (add -i for case-insensitivity) 
+`grep -rl "<text>" <dir>` -> Search for all files containing <text> inside <dir>.
+
+## Network
+`ping <host>` -> Ping <host> and display status.
+`whois <domain>` -> Output whois information for <domain>.
+`curl -O <url/to/file>` -> Download <file> (via HTTP[S] or FTP).
+`ssh <username>@<host>` -> Establish an SSH connection to <host> with user <username>.
+`scp <file> <user>@<host>:/remote/path` -> Copy <file> to a remote <host>.
+
+## Processes
+`ps aux` -> Output currently running processes.
+`top` -> Display live information about currently running processes.
+`kill <pid>` -> Quit process with ID <pid>.
