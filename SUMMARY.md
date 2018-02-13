@@ -9,4 +9,5 @@
 * [Flash Notifications](flash-notifications.md)
 * [Passport](passport.md)
 * [GIT](git.md)
+* [Command Line](command-line.md)
 
