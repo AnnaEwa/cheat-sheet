@@ -280,47 +280,61 @@
 <h2 id="getting-help">Getting Help</h2>
 <p>On the command line, help is always at hand: you can either type <code>man &lt;command&gt;</code> or <code>&lt;command --help&gt;</code> to receive detailed documentation about the command in question.</p>
 <h2 id="directories">Directories</h2>
-<p><code>pwd</code> -&gt; Display path of current working directory.
-<code>cd &lt;directory&gt;</code> -&gt; Change directory to <code>&lt;directory&gt;</code>.
-<code>cd ..</code> -&gt; Navigate to parent directory.
-<code>ls</code> -&gt; List directory contents
-<code>ls -la</code> -&gt; List detailed directory contents, including hidden files.
-<code>mkdir &lt;directory&gt;</code> -&gt; Create new directory named <code>&lt;directory&gt;</code>.</p>
+<ul>
+<li><code>pwd</code> -&gt; Display path of current working directory.</li>
+<li><code>cd &lt;directory&gt;</code> -&gt; Change directory to <code>&lt;directory&gt;</code>.</li>
+<li><code>cd ..</code> -&gt; Navigate to parent directory.</li>
+<li><code>ls</code> -&gt; List directory contents</li>
+<li><code>ls -la</code> -&gt; List detailed directory contents, including hidden files.</li>
+<li><code>mkdir &lt;directory&gt;</code> -&gt; Create new directory named <code>&lt;directory&gt;</code>.</li>
+</ul>
 <h2 id="output">Output</h2>
-<p><code>cat &lt;file&gt;</code> -&gt; Output the contents of <code>&lt;file&gt;</code>.
-<code>less &lt;file&gt;</code> -&gt; Output the contents of <code>&lt;file&gt;</code> using the less command (which supports pagination etc.).
-<code>head &lt;file&gt;</code> -&gt; Output the first 10 lines of <code>&lt;file&gt;</code>.
-<code>&lt;cmd&gt; &gt; &lt;file&gt;</code> -&gt; Direct the output of <code>&lt;cmd&gt;</code> into <code>&lt;file&gt;</code>.
-<code>&lt;cmd&gt; &gt;&gt; &lt;file&gt;</code> -&gt; Append the output of <code>&lt;cmd&gt;</code> to <code>&lt;file&gt;</code>.
-<code>&lt;cmd1&gt; | &lt;cmd2&gt;</code> -&gt; Direct the output of <code>&lt;cmd1&gt;</code> to <code>&lt;cmd2&gt;</code>.
-<code>clear</code> -&gt; Clear the command line window.</p>
+<ul>
+<li><code>cat &lt;file&gt;</code> -&gt; Output the contents of <code>&lt;file&gt;</code>.</li>
+<li><code>less &lt;file&gt;</code> -&gt; Output the contents of <code>&lt;file&gt;</code> using the less command (which supports pagination etc.).</li>
+<li><code>head &lt;file&gt;</code> -&gt; Output the first 10 lines of <code>&lt;file&gt;</code>.</li>
+<li><code>&lt;cmd&gt; &gt; &lt;file&gt;</code> -&gt; Direct the output of <code>&lt;cmd&gt;</code> into <code>&lt;file&gt;</code>.</li>
+<li><code>&lt;cmd&gt; &gt;&gt; &lt;file&gt;</code> -&gt; Append the output of <code>&lt;cmd&gt;</code> to <code>&lt;file&gt;</code>.</li>
+<li><code>&lt;cmd1&gt; | &lt;cmd2&gt;</code> -&gt; Direct the output of <code>&lt;cmd1&gt;</code> to <code>&lt;cmd2&gt;</code>.</li>
+<li><code>clear</code> -&gt; Clear the command line window.</li>
+</ul>
 <h2 id="files">Files</h2>
-<p><code>rm &lt;file&gt;</code> -&gt; Delete <code>&lt;file&gt;</code>
-<code>rm -r &lt;directory&gt;</code> -&gt; Delete <code>&lt;directory&gt;</code>
-<code>rm -f &lt;file&gt;</code> -&gt; Force-delete <code>&lt;file&gt;</code> (add -r to force-delete a directory)
-<code>mv &lt;file-old&gt; &lt;file-new&gt;</code> -&gt; Rename <code>&lt;file-old&gt;</code> to <code>&lt;file-new&gt;</code>
-<code>mv &lt;file&gt; &lt;directory&gt;</code> -&gt; Move <code>&lt;file&gt;</code> to <code>&lt;directory&gt;</code> (possibly overwriting an existing file)
-<code>cp &lt;file&gt; &lt;directory&gt;</code> -&gt; Copy <code>&lt;file&gt;</code> to <code>&lt;directory&gt;</code> (possibly overwriting an existing file)
-<code>cp -r &lt;directory1&gt; &lt;directory2&gt;</code> -&gt; Copy <code>&lt;directory1&gt;</code> and its contents to <code>&lt;directory2&gt;</code> (possibly overwriting files in an existing directory)
-<code>touch &lt;file&gt;</code> -&gt; Update file access &amp; modification time (and create <code>&lt;file&gt;</code> if it doesn&#x2019;t exist)</p>
+<ul>
+<li><code>rm &lt;file&gt;</code> -&gt; Delete <code>&lt;file&gt;</code></li>
+<li><code>rm -r &lt;directory&gt;</code> -&gt; Delete <code>&lt;directory&gt;</code></li>
+<li><code>rm -f &lt;file&gt;</code> -&gt; Force-delete <code>&lt;file&gt;</code> (add -r to force-delete a directory)</li>
+<li><code>mv &lt;file-old&gt; &lt;file-new&gt;</code> -&gt; Rename <code>&lt;file-old&gt;</code> to <code>&lt;file-new&gt;</code></li>
+<li><code>mv &lt;file&gt; &lt;directory&gt;</code> -&gt; Move <code>&lt;file&gt;</code> to <code>&lt;directory&gt;</code> (possibly overwriting an existing file)</li>
+<li><code>cp &lt;file&gt; &lt;directory&gt;</code> -&gt; Copy <code>&lt;file&gt;</code> to <code>&lt;directory&gt;</code> (possibly overwriting an existing file)</li>
+<li><code>cp -r &lt;directory1&gt; &lt;directory2&gt;</code> -&gt; Copy <code>&lt;directory1&gt;</code> and its contents to <code>&lt;directory2&gt;</code> (possibly overwriting files in an existing directory)</li>
+<li><code>touch &lt;file&gt;</code> -&gt; Update file access &amp; modification time (and create <code>&lt;file&gt;</code> if it doesn&#x2019;t exist)</li>
+</ul>
 <h2 id="search">Search</h2>
-<p><code>find &lt;dir&gt; -name &quot;&lt;file&gt;&quot;</code> -&gt; Find all files named <file> inside <dir> (use wildcards [<em>] to search for parts of filenames,e.g.&quot;file.</em>&quot;).
-<code>grep &quot;&lt;text&gt;&quot; &lt;file&gt;</code> -&gt; Output all occurrences of <text> inside. <file> (add -i for case-insensitivity) 
-<code>grep -rl &quot;&lt;text&gt;&quot; &lt;dir&gt;</code> -&gt; Search for all files containing <text> inside <dir>.</dir></text></file></text></dir></file></p>
+<ul>
+<li><code>find &lt;dir&gt; -name &quot;&lt;file&gt;&quot;</code> -&gt; Find all files named <file> inside <dir> (use wildcards [<em>] to search for parts of filenames,e.g.&quot;file.</em>&quot;).</dir></file></li>
+<li><code>grep &quot;&lt;text&gt;&quot; &lt;file&gt;</code> -&gt; Output all occurrences of <text> inside. <file> (add -i for case-insensitivity) </file></text></li>
+<li><code>grep -rl &quot;&lt;text&gt;&quot; &lt;dir&gt;</code> -&gt; Search for all files containing <text> inside <dir>.</dir></text></li>
+</ul>
 <h2 id="network">Network</h2>
-<p><code>ping &lt;host&gt;</code> -&gt; Ping <host> and display status.
-<code>whois &lt;domain&gt;</code> -&gt; Output whois information for <domain>.
-<code>curl -O &lt;url/to/file&gt;</code> -&gt; Download <file> (via HTTP[S] or FTP).
-<code>ssh &lt;username&gt;@&lt;host&gt;</code> -&gt; Establish an SSH connection to <host> with user <username>.
-<code>scp &lt;file&gt; &lt;user&gt;@&lt;host&gt;:/remote/path</code> -&gt; Copy <file> to a remote <host>.</host></file></username></host></file></domain></host></p>
+<ul>
+<li><code>ping &lt;host&gt;</code> -&gt; Ping <host> and display status.</host></li>
+<li><code>whois &lt;domain&gt;</code> -&gt; Output whois information for <domain>.</domain></li>
+<li><code>curl -O &lt;url/to/file&gt;</code> -&gt; Download <file> (via HTTP[S] or FTP).</file></li>
+<li><code>ssh &lt;username&gt;@&lt;host&gt;</code> -&gt; Establish an SSH connection to <host> with user <username>.</username></host></li>
+<li><code>scp &lt;file&gt; &lt;user&gt;@&lt;host&gt;:/remote/path</code> -&gt; Copy <file> to a remote <host>.</host></file></li>
+</ul>
 <h2 id="processes">Processes</h2>
-<p><code>ps aux</code> -&gt; Output currently running processes.
-<code>top</code> -&gt; Display live information about currently running processes.
-<code>kill &lt;pid&gt;</code> -&gt; Quit process with ID <pid>.</pid></p>
+<ul>
+<li><code>ps aux</code> -&gt; Output currently running processes.</li>
+<li><code>top</code> -&gt; Display live information about currently running processes.</li>
+<li><code>kill &lt;pid&gt;</code> -&gt; Quit process with ID <pid>.</pid></li>
+</ul>
 <h2 id="permissions">Permissions</h2>
-<p><code>chmod 755 &lt;file&gt;</code> -&gt; Change permissions of <file> to 755
-<code>chmod -R 600 &lt;directory&gt;</code> -&gt; Change permissions of <directory> (and its contents) to 600
-<code>chown &lt;user&gt;:&lt;group&gt; &lt;file&gt;</code> -&gt; Change owner ship of <file> to <user> and <group> (add -R to include a directory&#x2019;s contents)</group></user></file></directory></file></p>
+<ul>
+<li><code>chmod 755 &lt;file&gt;</code> -&gt; Change permissions of <file> to 755</file></li>
+<li><code>chmod -R 600 &lt;directory&gt;</code> -&gt; Change permissions of <directory> (and its contents) to 600</directory></li>
+<li><code>chown &lt;user&gt;:&lt;group&gt; &lt;file&gt;</code> -&gt; Change owner ship of <file> to <user> and <group> (add -R to include a directory&#x2019;s contents)</group></user></file></li>
+</ul>
 
                                 
                                 </section>
@@ -360,7 +374,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Command Line","level":"1.8","depth":1,"previous":{"title":"GIT","level":"1.7","depth":1,"path":"git.md","ref":"git.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["ga","runkit","panel","recently-updated"],"pluginsConfig":{"panel":{},"search":{},"runkit":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"recently-updated":{},"ga":{"configuration":"auto","token":"UA-113929457-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"command-line.md","mtime":"2018-02-13T11:44:53.466Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-13T11:50:21.083Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Command Line","level":"1.8","depth":1,"previous":{"title":"GIT","level":"1.7","depth":1,"path":"git.md","ref":"git.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["ga","runkit","panel","recently-updated"],"pluginsConfig":{"panel":{},"search":{},"runkit":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"recently-updated":{},"ga":{"configuration":"auto","token":"UA-113929457-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"command-line.md","mtime":"2018-02-13T11:55:29.503Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-13T11:55:42.333Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
