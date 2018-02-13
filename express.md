@@ -98,9 +98,9 @@ const expressLayouts = require('express-ejs-layouts');
 ...
 app.set('view engine', 'ejs');
 
-app.set("layout extractScripts", true) // see Documentation
-app.set("layout extractStyles", true) // see Documentation
-app.set("layout extractMetas", true) // see Documentation
+app.set('layout extractScripts', true) // see Documentation
+app.set('layout extractStyles', true) // see Documentation
+app.set('layout extractMetas', true) // see Documentation
 app.set('layout', 'layouts/main'); // custom layout
 
 app.use(expressLayouts); 
@@ -121,3 +121,6 @@ views
     ├── main.ejs
     └── secondLayout.ejs
 ```
+
+
+
