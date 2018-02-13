@@ -14,3 +14,12 @@ On the command line, help is always at hand: you can either type `man <command>`
 `ls -la` -> List detailed directory contents, including hidden files.
 `mkdir <directory>` -> Create new directory named `<directory>`.
 
+## Output
+
+`cat <file>` -> Output the contents of `<file>`.
+`less <file>` -> Output the contents of `<file>` using the less command (which supports pagination etc.).
+`head <file>` -> Output the first 10 lines of `<file>`.
+`<cmd> > <file>` -> Direct the output of `<cmd>` into `<file>`.
+`<cmd> >> <file>` -> Append the output of `<cmd>` to `<file>`.
+`<cmd1> | <cmd2>` Direct the output of `<cmd1>` to `<cmd2>`.
+`clear` -> Clear the command line window.
