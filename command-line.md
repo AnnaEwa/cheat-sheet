@@ -51,3 +51,8 @@ On the command line, help is always at hand: you can either type `man <command>`
 `ps aux` -> Output currently running processes.
 `top` -> Display live information about currently running processes.
 `kill <pid>` -> Quit process with ID <pid>.
+
+## Permissions
+`chmod 755 <file>` -> Change permissions of <file> to 755
+`chmod -R 600 <directory>` -> Change permissions of <directory> (and its contents) to 600
+`chown <user>:<group> <file>` -> Changeownershipof<file>to<user> and <group> (add -R to include a directory’s contents)
