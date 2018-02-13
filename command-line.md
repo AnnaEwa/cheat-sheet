@@ -21,5 +21,5 @@ On the command line, help is always at hand: you can either type `man <command>`
 `head <file>` -> Output the first 10 lines of `<file>`.
 `<cmd> > <file>` -> Direct the output of `<cmd>` into `<file>`.
 `<cmd> >> <file>` -> Append the output of `<cmd>` to `<file>`.
-`<cmd1> | <cmd2>` Direct the output of `<cmd1>` to `<cmd2>`.
+`<cmd1> | <cmd2>` -> Direct the output of `<cmd1>` to `<cmd2>`.
 `clear` -> Clear the command line window.
