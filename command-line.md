@@ -32,7 +32,7 @@ On the command line, help is always at hand: you can either type `man <command>`
 `mv <file-old> <file-new>` -> Rename `<file-old>` to `<file-new>`
 `mv <file> <directory>` -> Move `<file>` to `<directory>` (possibly overwriting an existing file)
 `cp <file> <directory>` -> Copy `<file>` to `<directory>` (possibly overwriting an existing file)
-`cp -r <directory1> <directory2>` -> Copy `<directory1>` and its contents to `<directory2>` (possibly overwriting files inanexistingdirectory)
+`cp -r <directory1> <directory2>` -> Copy `<directory1>` and its contents to `<directory2>` (possibly overwriting files in an existing directory)
 `touch <file>` -> Update file access & modification time (and create `<file>` if it doesn’t exist)
 
 ## Search
@@ -55,4 +55,5 @@ On the command line, help is always at hand: you can either type `man <command>`
 ## Permissions
 `chmod 755 <file>` -> Change permissions of <file> to 755
 `chmod -R 600 <directory>` -> Change permissions of <directory> (and its contents) to 600
-`chown <user>:<group> <file>` -> Changeownershipof<file>to<user> and <group> (add -R to include a directory’s contents)
+`chown <user>:<group> <file>` -> Change owner ship of <file> to <user> and <group> (add -R to include a directory’s contents)
+
