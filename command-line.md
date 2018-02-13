@@ -23,3 +23,14 @@ On the command line, help is always at hand: you can either type `man <command>`
 `<cmd> >> <file>` -> Append the output of `<cmd>` to `<file>`.
 `<cmd1> | <cmd2>` -> Direct the output of `<cmd1>` to `<cmd2>`.
 `clear` -> Clear the command line window.
+
+## Files
+
+`rm <file>` -> Delete `<file>`
+`rm -r <directory>` -> Delete `<directory>`
+`rm -f <file>` -> Force-delete `<file>` (add -r to force-delete a directory)
+`mv <file-old> <file-new>` -> Rename `<file-old>` to `<file-new>`
+`mv <file> <directory>` -> Move `<file>` to `<directory>` (possibly overwriting an existing file)
+`cp <file> <directory>` -> Copy `<file>` to `<directory>` (possibly overwriting an existing file)
+`cp -r <directory1> <directory2>` -> Copy `<directory1>` and its contents to `<directory2>` (possibly overwriting files inanexistingdirectory)
+`touch <file>` -> Update file access & modification time (and create `<file>` if it doesn’t exist)
