@@ -53,6 +53,17 @@ On the command line, help is always at hand: you can either type `man <command>`
 - `kill <pid>` -> Quit process with ID <pid>.
 
 ## Permissions
+
+On Unix systems, file permissions are set using three digits: the first one representing the permissions for the owning user, the second one for its group, and the third one for anyone else.
+
+Add up the desired access rights for each digit as following:
+
+4 —access/read(r)
+2 —modify/write(w)
+1 —execute(x)
+
+For example, `755` means “rwx” for owner and “rx” for both group and anyone. `740` represents “rwx” for owner, “r” for group and no rights for other users.
+
 - `chmod 755 <file>` -> Change permissions of <file> to 755
 - `chmod -R 600 <directory>` -> Change permissions of <directory> (and its contents) to 600
 - `chown <user>:<group> <file>` -> Change owner ship of <file> to <user> and <group> (add -R to include a directory’s contents)
